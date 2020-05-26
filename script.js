@@ -11,6 +11,30 @@ $(document).ready(function(){
 
   document.documentElement.setAttribute('data-theme', window.localStorage.getItem('theme'));
 
+
+//Set current month
+      var months = {
+  January: 0,
+  February: 1,
+  March: 2,
+  April: 3,
+  May: 4,
+  June: 5,
+  July: 6,
+  August: 7,
+  September: 8,
+  October: 9,
+  November: 10,
+  December: 11
+};
+
+      var currentDate = new Date();
+      var currentMonth = currentDate.getMonth();
+
+var currentMonthName = months[currentMonth];
+$('.month-title').text(currentMonthName);
+
+
 //Materialize CSS Initialization
 $('.modal').modal();
 $('select').formSelect();
