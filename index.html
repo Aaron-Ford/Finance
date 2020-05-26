@@ -1,10 +1,280 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Finance App</title>
-</head>
-<body>
-Hello World, this is a test for my finance app.
-This is a update.
+  <!DOCTYPE html>
+  <html data-theme="green">
+  <head>
+    <script type="text/javascript">
+      window.localStorage.getItem('user');
+console.log(window.localStorage.getItem('theme'));
+
+document.documentElement.setAttribute('data-theme', window.localStorage.getItem('theme'));
+    </script>
+<link href="https://fonts.googleapis.com/css?family=Google+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script async defer src="https://apis.google.com/js/api.js"></script>
+<!-- <meta name="google-signin-client_id" content="445085220435-idkhgdp1mjq4kms616f0eheht2k16f37.apps.googleusercontent.com">
+ -->
+
+        <link type="text/css" rel="stylesheet" href="materialize-src/css/materialize.css"  media="screen,projection"/>
+
+
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#000000">
+
+        <!-- Compiled and minified CSS -->
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/zud2vce.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  </head>
+        <body>
+          <div class="preloader">
+            <div class="progress" style="display:none">
+      <div class="indeterminate"></div>
+  </div>
+            <div class="valign-wrapper">
+              <div class="container sign-in-container center">
+                
+                <img class="logo" src="images/savinfinite.png">
+                      <h2>Savinfinite</h2>
+                      <h3>Start Budgeting. Start Saving.</h3>
+                      <div class="dynamic-content">
+<!--                       <p>All data is stored in your own personal google sheets. If you stop using this app, you will still have access to your data.</p>
+ -->                       <button id="authorize_button" class=" center-align btn btn-flat white black-text google-sign-in" style="display: none;">Get Started</button>
+                       <span class="preloader-text"></span>
+                     </div>
+                    </div>
+                  </div>
+
+            </div>
+
+           <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+       
+      </div>
+      <a href="#user"><img class="circle profile-pic" src=""></a>
+      <a href="#name"><span class="profile-name white-text name"></span></a>
+      <a href="#email"><span class="profile-email white-text email"></span></a>
+    </div></li>
+
+    <li>
+        <ul class="collapsible">
+          <li><div class="collapsible-header"><i class="material-icons">calendar_today</i><span class="month-title">March</span></div>
+                <div class="collapsible-body">
+
+    <p class="month-switch">
+      <label>
+        <input name="group2" type="radio" value="January" />
+        <span>January</span>
+      </label>
+    </p>
+    <p class="month-switch">
+      <label>
+        <input name="group2" type="radio" value="February" />
+        <span>February</span>
+      </label>
+    </p>
+    <p class = "month-switch">
+      <label>
+        <input name="group2" type="radio"  value="March" />
+        <span>March</span>
+      </label>
+    </p>
+    <p class = "month-switch">
+      <label>
+        <input name="group2" type="radio"  value="April" />
+        <span>April</span>
+      </label>
+    </p>
+    <p class="month-switch">
+      <label>
+        <input name="group2" type="radio" value="May" />
+        <span>May</span>
+      </label>
+    </p>
+  </div></li>
+    <li>
+
+      <div class="collapsible-header"><i class="material-icons">color_lens</i>Change Theme</div>
+      <div class="collapsible-body">
+
+    <p class="switch blue">
+      <label>
+        <input name="group1" type="radio" />
+        <span>Blue</span>
+      </label>
+    </p>
+    <p class="switch green">
+      <label>
+        <input name="group1" type="radio" />
+        <span>Green</span>
+      </label>
+    </p>
+    <p class = "switch purple">
+      <label>
+        <input name="group1" type="radio"  />
+        <span>Purple</span>
+      </label>
+    </p>
+    <p class = "switch dark">
+      <label>
+        <input name="group1" type="radio"  />
+        <span>Dark</span>
+      </label>
+    </p>
+    <p class="switch red">
+      <label>
+        <input name="group1" type="radio"/>
+        <span>Red</span>
+      </label>
+    </p>
+        <p class="switch google">
+      <label>
+        <input name="group1" type="radio"/>
+        <span>Red</span>
+      </label>
+    </p>
+  </div>
+    </li>
+    <li>
+<a class="waves-effect" href="https://docs.google.com/spreadsheets/d/1kyO824yXeg-0r2hG8Zs8viHCuxgFr744cFB2lN3lzuY/edit">
+        <div class="collapsible-header"><i class="material-icons">table_chart</i>Google Sheet</div></a>
+
+
+  </ul>
+    </li>
+    <button id="signout_button" class="google-sign-in btn" style="display: none;">Sign Out</button>
+  </ul>
+
+   <div id="theme-modal" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+
+                   <main>
+
+
+
+  
+    
+
+<div class="dollar-container">
+  <span class="dollar 1">$</span>
+  <span class="dollar two">$</span>
+  <span class="dollar three">$</span>
+</div>
+
+</div>
+
+          <div class="shape"></div>
+              <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
+
+          <ul class="tabs center-align">
+
+            <li class="tab col s3 budget"><a href="#test1" class="active">Budget</a></li>
+            <li class="tab col s3 mortgage"><a href="#test2">Mortgage</a></li>
+            <li class="tab col s3 savings"><a href="#test4">Savings</a></li>
+          </ul>
+          <div class="container">
+            <div id="test1" class="col s12">
+  
+              <div class="card">
+                 <pre id="content" style="white-space: pre-wrap;"></pre>
+              <h3>Discretionary</h3>
+       <div class = 'discretionary-container'>
+        </div>
+    </div>
+      <div class="divider"></div>
+      <h3>Essentials</h3>
+     <div class = 'essentials-container'>
+        </div>
+
+  </div>
+
+</div>
+<div id="test2" class="col s12">
+
+  <div class="mortgage-info container center-align">
+
+
+  </div>
+</div>
+
+</div>
+<div id="test4" class="col s12">
+ <div class="container">
+  <h1 class="center-align">$14,253</h1>
+  <div class="row">
+    <div class="col s4">
+      <div class="tesla">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253.58 252.5"><defs><linearGradient y2="0%" x2="0%" y1="100%" x1="0%" id="grad1"><stop stop-color="#FFFFFF" offset="50%" id="F1gst1"/><stop stop-color="rgba(255,255,255,0)" offset="30%" id="grad1"/></linearGradient></defs><title>teslalogo</title><path fill="url(#grad1)" d="M234.39,0H19.19A19.19,19.19,0,0,0,0,19.19V233.31A19.19,19.19,0,0,0,19.19,252.5h215.2a19.19,19.19,0,0,0,19.19-19.19V19.19A19.19,19.19,0,0,0,234.39,0ZM186.93,86.11c-1.13-11.17-9-13.9-33.94-13.9L126.81,219.4,100.42,72.21c-24.78,0-32.64,2.72-33.78,13.88,0,0-16.74-6.24-25.18-18.91,32.93-15.26,66-16,66-16l19.3,23.5,19.28-23.48s33.09.69,66,16C203.66,79.87,186.93,86.11,186.93,86.11Zm28.16-24A215.77,215.77,0,0,0,126.8,44.43h0a215.64,215.64,0,0,0-88.3,17.71,89.11,89.11,0,0,1-5.24-10.82A256.21,256.21,0,0,1,126.79,33.1a256.17,256.17,0,0,1,93.54,18.23S219.26,54.65,215.09,62.15Z"/></svg>
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253.58 252.5"><defs><linearGradient y2="30%" x2="100%" y1="0%" x1="0%" id="grad1"><stop stop-color="#00FF00" offset="50%" id="F1gst1"/><stop stop-color="rgba(255,255,255,0)" offset="30%" id="grad1"/></linearGradient></defs><title>teslalogo</title><path fill="rgba(255,255,255,.3)" d="M234.39,0H19.19A19.19,19.19,0,0,0,0,19.19V233.31A19.19,19.19,0,0,0,19.19,252.5h215.2a19.19,19.19,0,0,0,19.19-19.19V19.19A19.19,19.19,0,0,0,234.39,0ZM186.93,86.11c-1.13-11.17-9-13.9-33.94-13.9L126.81,219.4,100.42,72.21c-24.78,0-32.64,2.72-33.78,13.88,0,0-16.74-6.24-25.18-18.91,32.93-15.26,66-16,66-16l19.3,23.5,19.28-23.48s33.09.69,66,16C203.66,79.87,186.93,86.11,186.93,86.11Zm28.16-24A215.77,215.77,0,0,0,126.8,44.43h0a215.64,215.64,0,0,0-88.3,17.71,89.11,89.11,0,0,1-5.24-10.82A256.21,256.21,0,0,1,126.79,33.1a256.17,256.17,0,0,1,93.54,18.23S219.26,54.65,215.09,62.15Z"/></svg>
+
+      </div>
+    </div>
+    <div class="col s4"></div>
+    <div class="col s4"></div>
+  </div>
+</div>
+</div>
+
+</main>
+<div class="overlay"></div>
+<footer class="page-footer">
+
+<div class="expense-container">
+  <div class="container row">
+    <div class="tag-container col s12"><div class="chip blue white-text waves waves-effect">Expense Type</div></div>
+<!--     <h4>Add Expense</h4>
+ -->
+    <form name="submit-to-google-sheet" action="#" class="radio-buttons">
+
+  </form>
+</div>
+    </div>
+<div class="icon-container">
+     <div class="container">
+  <div class="icons">
+   <div class="row">
+    <div class="col s2 center-align"><i class="material-icons quick-add personal">person</i></div>
+    <div class="col s3 center-align"><i class="material-icons quick-add" data-quick-add-type = "Household">house</i></div>
+    <div class="col s2 center-align"><i class="material-icons quick-add" data-quick-add-type = "General">add_circle</i></div>
+
+
+    <div class="col s3 center-align"><i class="material-icons quick-add" data-quick-add-type = "Groceries">local_grocery_store</i></div>
+    <div class="col s2 center-align"><i class="material-icons quick-add" data-quick-add-type = "Petrol">local_gas_station</i></div>
+  </div>
+</div>
+</div>
+</div>
+</footer>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="expense.js"></script>
+
+<script type="text/javascript" src="materialize-src/js/bin/materialize.js"></script>
+ <script type="text/javascript" src="sheetsScript.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 </body>
+
 </html>
