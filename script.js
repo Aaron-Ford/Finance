@@ -30,6 +30,7 @@ $(document).ready(function(){
 
       var currentDate = new Date();
       var currentMonth = currentDate.getMonth();
+      console.log('current month number is ' + currentMonth);
 
 var currentMonthName = months[currentMonth];
 console.log('Current month is ' + currentMonthName);
