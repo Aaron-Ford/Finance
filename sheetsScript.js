@@ -134,8 +134,6 @@ Date.prototype.addHours = function(h) {
             var row = valueArray.values[i];
             var dateSimple = row[0];
             var date = new Date(dateSimple).addHours(7);
-            console.log(dateSimple);
-            console.log('date is ' + date);
             var month = date.getMonth();
             var category = row[2];
             var subCategory = row[3];
