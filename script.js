@@ -28,11 +28,13 @@ $(document).ready(function(){
   December: 11
 };
 
+var monthIndex = Object.keys(months);
+
       var currentDate = new Date();
       var currentMonth = currentDate.getMonth();
       console.log('current month number is ' + currentMonth);
 
-var currentMonthName = months[currentMonth];
+var currentMonthName = monthIndex[currentMonth];
 console.log('Current month is ' + currentMonthName);
 $('.month-title').text(currentMonthName);
 
