@@ -32,6 +32,7 @@ $(document).ready(function(){
       var currentMonth = currentDate.getMonth();
 
 var currentMonthName = months[currentMonth];
+console.log('Current month is ' + currentMonthName);
 $('.month-title').text(currentMonthName);
 
 
